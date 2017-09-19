@@ -16,6 +16,7 @@
 		.right { float: right; }
 		.half { width: 50%; }
 	</style>
+	<script src="javascripts/echarts.js"></script>
 </head>
 <body>	
 	<div class="left">
@@ -30,7 +31,7 @@
 			<input type="button" value="Clear" onClick="erase()">
 		</form>
 	</div>
-	<div class="right" id="graph">
+	<div class="right" id="graph" style="width: 500px;height:400px;">
 		<script type="text/javascript">
 			function randomData() {
 				return Math.random() * 10;
