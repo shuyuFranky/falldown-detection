@@ -19,24 +19,25 @@
 	<script src="javascripts/echarts.js"></script>
 </head>
 <body>	
-	<div class="left" style="width: 500px;height:400px;">
+	<div style="display:flex;justify-content:center;margin-top:150px;">
+	<div class="left">
 		<!-- <h1>Demo Page</h1>
 		<h3>Demonstrates Fall Down detection</h3> -->
 		
-		<img id="img">
+		<img id="img" style="width: 500px;height:400px;margin-right:20px;">
 		<!-- A button for taking snaps -->
 		
+		<form>
+			<input type="button" value="Start" onClick="start()">
+			<input type="button" value="Stop" onClick="stop()">
+			<input type="button" value="Clear" onClick="erase()">
+		</form>
+	
 	</div>
 	
-	<div class="right" id="graph" style="width: 500px;height:400px;">
+	<div class="left" id="graph" style="width: 500px;height:400px;">
 	</div>
-
-	<form>
-		<input type="button" value="Start" onClick="start()">
-		<input type="button" value="Stop" onClick="stop()">
-		<input type="button" value="Clear" onClick="erase()">
-	</form>
-	
+	</div>
 	<script language="JavaScript">
 		var pic_num = 0;
 		var timer = null;
@@ -47,7 +48,7 @@
 		var option;
 		option = {
 			title: {
-				text: '动态数据 + 时间坐标轴'
+				text: ''
 			},
 			tooltip: {
 				trigger: 'axis',
