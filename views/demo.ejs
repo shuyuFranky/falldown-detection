@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>WebcamJS Test Page</title>
+	<style type="text/css">
+		body { font-family: Helvetica, sans-serif; }
+		h2, h3 { margin-top:0; }
+		form { margin-top: 15px; }
+		form > input { margin-right: 15px; }
+		#results { float:right; padding:15px; border:1px solid; background:#f8f8f8; }
+		#img { width: 50%; height: 50%; }
+		
+		.left { float: left; }
+		.right { float: right; }
+		.half { width: 50%; }
+	</style>
+</head>
+<body>	
+	<div class="left">
+		<h1>Demo Page</h1>
+		<h3>Demonstrates Fall Down detection</h3>
+		
+		<img id="img">
+		<!-- A button for taking snaps -->
+		<form>
+			<input type="button" value="Start" onClick="start()">
+			<input type="button" value="Stop" onClick="stop()">
+			<input type="button" value="Clear" onClick="erase()">
+		</form>
+	</div>
+	<div class="right" id="graph">
+		
+	</div>
+	
+	
+	<script language="JavaScript">
+		var pic_num = 0;
+		var timer = null;
+		function take_snapshot() {
+		// take snapshot and get image data
+		pic_num = pic_num + 1;
+		if (pic_num > 153)	pic_num = 1;
+		document.getElementById("img").src = "/images/IMG_9239/IMG_9239_" + pic_num + ".jpg";
+		
+		}		
+		function start() {
+			if (!timer) {
+				take_snapshot();
+				timer = setInterval( take_snapshot, 42 );
+			}
+		}
+		
+		function stop() {
+			if (timer) {
+				clearTimeout( timer );
+				timer = null;
+			}
+		}
+		
+		function erase() {
+			pic_num = 0;
+		}
+	</script>
+	
+</body>
+</html>
+
