@@ -19,21 +19,23 @@
 	<script src="javascripts/echarts.js"></script>
 </head>
 <body>	
-	<div class="left">
-		<h1>Demo Page</h1>
-		<h3>Demonstrates Fall Down detection</h3>
+	<div class="left" style="width: 500px;height:400px;">
+		<!-- <h1>Demo Page</h1>
+		<h3>Demonstrates Fall Down detection</h3> -->
 		
-		<img id="img" style="width: 500px;height:400px;">
+		<img id="img">
 		<!-- A button for taking snaps -->
-		<form>
-			<input type="button" value="Start" onClick="start()">
-			<input type="button" value="Stop" onClick="stop()">
-			<input type="button" value="Clear" onClick="erase()">
-		</form>
-	</div>
-	<div class="right" id="graph" style="width: 500px;height:400px;">
+		
 	</div>
 	
+	<div class="right" id="graph" style="width: 500px;height:400px;">
+	</div>
+
+	<form>
+		<input type="button" value="Start" onClick="start()">
+		<input type="button" value="Stop" onClick="stop()">
+		<input type="button" value="Clear" onClick="erase()">
+	</form>
 	
 	<script language="JavaScript">
 		var pic_num = 0;
