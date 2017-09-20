@@ -32,3 +32,6 @@ npm-debug.log
 # data images
 public/images
 model/scripts
+*.pyc
+*.txt
+*.bak
