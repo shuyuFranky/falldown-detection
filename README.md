@@ -7,3 +7,5 @@
 <img src="https://github.com/shuyuFranky/falldown-detection/blob/master/public/gif/no2.gif"></img>
 #### 手机端展示
 <img src="https://github.com/shuyuFranky/falldown-detection/blob/master/public/gif/no.2_ip.gif"></img>
+
+###### 代码不完全，合作联系 18911602894@163.com
